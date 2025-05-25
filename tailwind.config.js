@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-        kodachasan: ['Kodchasan', 'sans-serif'],
+        kodchasan: ['Kodchasan', 'sans-serif'],
         michroma: ['Michroma', 'sans-serif'],
       }
     },
