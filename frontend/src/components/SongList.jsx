@@ -10,11 +10,7 @@ const Songlist = ({ yourSong, similarSongs }) => {
 
   useEffect(() => {
     if (artist && song && genre) {
-      fetchSimilarSongs();
-    }
-  }, [artist, song, genre]);
-
-  const fetchSimilarSongs = async () => {
+        const fetchSimilarSongs = async () => {
     try {
       const tokenRes = await fetch('https://sonifi-app.onrender.com/get-token');
       const tokenData = await tokenRes.json();
@@ -51,6 +47,10 @@ const Songlist = ({ yourSong, similarSongs }) => {
       console.error('Error fetching similar songs:', error);
     }
   };
+     if (artist && song && genre)  fetchSimilarSongs();
+    }
+  }, [artist, song, genre]);
+
 
   return (
     <div className="min-h-screen bg-[#14061e] text-white px-8 py-6 font-inter">

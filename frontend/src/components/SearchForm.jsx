@@ -9,7 +9,7 @@ function SearchForm() {
     const [song, setSong] = useState('') //song title
     const [genre, setGenre] = useState('r&b') //default genre
     const [showAlert, setShowAlert] = useState(false);
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -21,7 +21,7 @@ function SearchForm() {
     // Navigate to SongList page after form submission
     const handleExplore = () => {
     if (!artist || !song || !genre) {
-        setShow(true);
+        // setShow(true);
         setShowAlert(true);
         return;
     }
