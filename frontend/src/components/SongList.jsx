@@ -16,7 +16,7 @@ const Songlist = ({ yourSong, similarSongs }) => {
 
   const fetchSimilarSongs = async () => {
     try {
-      const tokenRes = await fetch('http://localhost:4000/get-token');
+      const tokenRes = await fetch('https://sonifi-app.onrender.com/get-token');
       const tokenData = await tokenRes.json();
       const accessToken = tokenData.access_token;
 

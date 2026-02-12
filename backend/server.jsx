@@ -7,6 +7,11 @@ const app = express();
 app.use(cors());
 const PORT = 4000;
 
+app.get('/', (req, res) => {
+  res.send('Backend is alive!');
+});
+
+
 app.get('/get-token', async (req, res) => {
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
